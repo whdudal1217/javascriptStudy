@@ -110,3 +110,5 @@ const fruit2 = { color:'blue', size:'big'};
 const mixed = Object.assign({}, fruit1, fruit2);
 console.log(`mixed Color : ${mixed.color}`);
 console.log(`mixed Size : ${mixed.size}`);
+
+//??
