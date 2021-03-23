@@ -82,13 +82,54 @@ console.log(`StaticClass.staticField : ${StaticClass.staticField}`); // 'static'
 // a way for one class to 
 class Shape{
     constructor(width, height,color){
-
+        this.width = width;
+        this.height = height;
+        this.color = color;
     }
     draw(){
-
+        console.log(`drawing ${this.color} color of~`);
     }
     getArea(){
-        
+        return this.width * this.height;
     }
 }
+
+class Rectangle extends Shape{
+    draw(){
+        console.log(`draw 🟥🟥🟥`);
+    }
+}
+class Triangle extends Shape{
+    // Overriding
+    draw(){
+        super.draw();
+        console.log(`🔺🔺🔺`);
+    }
+    getArea(){
+        return (this.width * this.height) / 2;
+    }
+    toString(){
+        return `Triangle's data type : ${typeof Triangle}`
+    }
+}
+
+const rectangel = new Rectangle(20,20,'red');
+rectangel.draw();
+console.log(rectangel.getArea());
+
+const tritangel = new Triangle(20,20,'blue');
+tritangel.draw();
+console.log(tritangel.getArea());
+
+// 6. Class checking : instanceOf
+console.log(rectangel instanceof Rectangle); //t
+console.log(rectangel instanceof Triangle); //f 
+console.log(tritangel instanceof Triangle); //t 
+console.log(tritangel instanceof Shape); //t 
+console.log(tritangel instanceof Object); //t
+
+console.log(typeof tritangel);
+console.log(tritangel.toString());
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 

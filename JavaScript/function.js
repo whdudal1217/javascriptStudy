@@ -216,3 +216,22 @@ const remainder = function(a,b){
 };
 
 console.log(`(callback function) 1 + 2 = ${cbCalculate(add,1,3)}`);
+
+// teacher's answer 
+function switchCalculate(command, a, b){
+    switch(command){
+        case 'add':
+            return a+b;
+        case 'substract':
+            return a+b;
+        case 'divide':
+            return a+b;
+        case 'multiply':
+            return a+b;
+        case 'remainder':
+            return a+b;
+        default :
+            throw Error(' unknown command ');
+    }
+}
+console.log(`(switchC function) 1 + 2 = ${switchCalculate('add', 1, 2)}`)
