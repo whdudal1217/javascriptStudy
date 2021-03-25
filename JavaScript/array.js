@@ -92,7 +92,7 @@ console.log(foods);
 
 // 5. Searching
 // find the index , indexOf & includes
-console.clear();
+//console.clear();
 console.log(fruits);
 console.log(`indexOf'🍒' -> ${fruits.indexOf('🍒')}`);
 console.log(`indexOf'🍊' -> ${fruits.indexOf('🍊')}`);
@@ -102,9 +102,58 @@ console.log(`indexOf'🍖' -> ${fruits.indexOf('🍖')}`);
 
 
 // lastIndexOf
-console.clear();
+//console.clear();
 fruits.push('🍓');
 console.log(fruits);
 console.log(`indexOf'🍓' -> ${fruits.indexOf('🍓')}`);
 console.log(`lastIndexOf'🍓' -> ${fruits.lastIndexOf('🍓')}`);
+
+
+// Study Alone
+
+console.clear();
+const arr = ['가'];
+
+// push : 요소 집어넣기
+let pushed = arr.push('나');
+console.log(`pushed : ${pushed}`); //returns the new length of the array.
+console.log(arr);
+
+// join : push처럼 아예 넣지는 않고 parameter를 넣었을때 배열이 어떻게 나오는지 확인 정도의 용도..?
+let joined = arr.sort('다'); 
+console.log(`joined : ${joined}`); // '가', '나', '다'
+
+console.log(arr); // '가', '나'
+
+// reverse : 정렬을 거꾸로 한 배열이 튀어나옴 return T[];
+let reverseArr = arr.reverse(); 
+console.log(reverseArr);
+
+// sort : 정렬 후 배열 돌려줌
+let sortArr = reverseArr.sort();
+console.log(sortArr);
+
+
+// test 1
+const array1 = [1, 30, 39, 29, 10, 13];
+// test 1-1
+const isBelowThreshold = (currentValue) => currentValue < 40; 
+const a = function (value){
+    return value < 40;
+}
+console.log('1 : '+array1.every(isBelowThreshold));
+
+// test 1-2
+let rs = array1.every(elem => elem <40);
+console.log('2 : '+rs);
+
+
+
+
+
+
+
+
+
+
 
