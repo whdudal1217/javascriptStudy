@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <document>
+        <name>2021 연습용 히트맵</name>
+        <Folder>
+            <name>AREA</name>
+            <Placemark id="id1">
+                <name>1</name>
+                <magnitude>5.9</magnitude>
+                <Point>
+                    <coordinates>126.11, 37.12 </coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="id2">
+                <name>1</name>
+                <magnitude>15.9</magnitude>
+                <Point>
+                    <coordinates>136.11, 38.12 </coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="id3">
+                <name>1</name>
+                <magnitude>25.9</magnitude>
+                <Point>
+                    <coordinates>146.11, 39.12 </coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+    </document>
+</kml>
