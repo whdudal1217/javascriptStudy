@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #map {
+            width: 600px;
+            height: 650px;
+            }
+            .left{
+                float: left;
+                margin: 2%;
+            }
+        </style>
+        <title>ol</title>
+    </head>
+    <body>
+        <div id="map" class="left"></div>
+        <div class="left">
+          <label>타입 : &nbsp;</label>  
+          <select id="type">
+            <option value="Point">점</option>
+            <option value="LineString">선</option>
+            <option value="Polygon">채우는 선</option>
+            <option value="Circle">원형</option>
+            <option value="None">없음</option>
+          </select>
+        </div>
+        <!-- JavaScript\openLayers\js\map1.js -->
+        <script src="../js/map1.js"></script>
+    </body>
+    </html>
