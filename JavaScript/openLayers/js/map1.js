@@ -1,4 +1,5 @@
-import Map from 'ol/Map.js';
+//var View = require('ol/View.js');
+//var express = require('express');
 import View from 'ol/View.js';
 import Draw from 'ol/interaction/Draw.js';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';

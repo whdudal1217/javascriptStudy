@@ -640,3 +640,56 @@ server 설정을 한 js 파일에 이 구문을 꼭 추가해야한다 <br />
     - olPrc2.html
     - ...
   - server.js
+
+  
+<br />
+<br />
+<br />
+
+-----
+
+# 5.12.1
+
+<br />
+
+>express 프레임워크를 사용해 서버를 돌리던 중 import가 제대로 되지 않았고
+js의 모듈에 대해서 알게 됨.
+
+##### 나는 지금까지 ``` <script> ``` 를 통해서 외부 js 파일을 들여왔음. <br />
+##### import도 require도 처음 써봐서 신기함. <br/>
+<br/>
+
+NodeJs는 최신 자바스크립트 문법들은 지원하지만, 모듈 시스템으로 CommonJs를 채택했기 때문에 ES 모듈 시스템은 사용할 수 없다고 한다. 
+<br/>
+<br/>
+- commonJs의 모듈 적용 방식
+```
+// 모듈 전체를 import
+var module = require('./someModule.js')
+
+// 모든 속성 import
+// (위의 module 객체에 모든 속성이 담아져 온다.)
+
+// 특정 멤버(함수 등)만 import, 위의 module을 이용한다.
+module.moduleFunc
+```
+
+----
+
+
+- ES6의 모듈 적용 방식
+```
+// 모듈 전체를 import
+import module
+import module as myModule
+
+
+// 모든 속성 import
+import * from module
+
+
+// 특정 멤버(함수 등)만 import
+import {moduleFunc, moduleFunc2} from module
+```
+
+> server.js 의 모든 commonjs를 es6 방식으로 바꿈, 이렇게 할 필요가 없다고 생각되어 다시 commonjs로 바꿈
